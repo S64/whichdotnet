@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S64.WhichDotNet", "S64.WhichDotNet\S64.WhichDotNet.csproj", "{4C811422-67EF-47E1-8EC9-02DE7ED1558B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S64.WhichDotNet.Core", "S64.WhichDotNet.Core\S64.WhichDotNet.Core.csproj", "{54E71BB9-0C78-401E-89BB-552845FF536B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{4C811422-67EF-47E1-8EC9-02DE7ED1558B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C811422-67EF-47E1-8EC9-02DE7ED1558B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C811422-67EF-47E1-8EC9-02DE7ED1558B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E71BB9-0C78-401E-89BB-552845FF536B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E71BB9-0C78-401E-89BB-552845FF536B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E71BB9-0C78-401E-89BB-552845FF536B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E71BB9-0C78-401E-89BB-552845FF536B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
