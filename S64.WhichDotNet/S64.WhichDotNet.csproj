@@ -10,4 +10,7 @@
     <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.3.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\S64.WhichDotNet.Core\S64.WhichDotNet.Core.csproj" />
+  </ItemGroup>
 </Project>
