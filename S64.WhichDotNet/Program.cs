@@ -60,7 +60,7 @@ namespace S64.WhichDotNet
                 if (ShowTilde && item.FullName.IndexOf(Paths.HomeDir.FullName, StringComparison.OrdinalIgnoreCase) == 0)
                 {
                     Console.WriteLine(
-                        $"~{Paths.DSC}{item.FullName.Remove(0, Paths.HomeDir.FullName.Length)}"
+                        $"~{item.FullName.Remove(0, Paths.HomeDir.FullName.Length)}"
                     );
                 }
                 else
