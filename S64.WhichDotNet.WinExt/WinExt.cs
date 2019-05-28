@@ -15,7 +15,7 @@ namespace S64.WhichDotNet.WinExt
             get { return new List<RegistryKey> { Registry.CurrentUser, Registry.LocalMachine } }
         }
 
-        public static IEnumerable<FileInfo> GetRegPaths()
+        public static IEnumerable<FileInfo> GetOrderedRegPaths()
         {
             var items = new List<FileInfo>();
 

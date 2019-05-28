@@ -34,7 +34,7 @@ namespace S64.WhichDotNet.Core
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                return WinExt.WinExt.GetRegPaths()
+                return WinExt.WinExt.GetOrderedRegPaths()
                     .Where(x => x.Exists);
             }
             return Enumerable.Empty<FileInfo>();
