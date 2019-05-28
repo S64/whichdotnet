@@ -23,8 +23,10 @@ namespace S64.WhichDotNet
         [Option("--skip-tilde", CommandOptionType.NoValue)]
         bool SkipTilde { get; }
 
+        /*
         [Option("--show-dot", CommandOptionType.NoValue)]
         bool ShotDot { get; }
+        */
 
         [Option("--show-tilde", CommandOptionType.NoValue)]
         bool ShowTilde { get; }
