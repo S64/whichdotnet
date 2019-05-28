@@ -32,8 +32,10 @@ namespace S64.WhichDotNet
         [Option("--skip-winreg", CommandOptionType.NoValue)]
         bool SkipWinreg { get; }
 
+        /*
         [Option("--with-nonexecutable", CommandOptionType.NoValue)]
         bool WithNonExecutable { get; }
+        */
 
         static void Main(string[] args)
             => CommandLineApplication.Execute<Program>(args);
