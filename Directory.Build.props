@@ -1,5 +1,10 @@
 <Project>
   <PropertyGroup>
     <VersionPrefix>0.0.0.1</VersionPrefix>
+    <Product>WhichDotNet</Product>
+    <Authors>Shuma Yoshioka</Authors>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/S64/whichdotnet</PackageProjectUrl>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 </Project>
