@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using S64.WhichDotNet.WinExt;
 
 namespace S64.WhichDotNet.Core
 {
@@ -34,7 +35,7 @@ namespace S64.WhichDotNet.Core
         {
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                return WinExt.WinExt.GetOrderedRegPaths()
+                return AppPathRegs.GetOrderedRegPaths()
                     .Where(x => x.Exists);
             }
             return Enumerable.Empty<FileInfo>();

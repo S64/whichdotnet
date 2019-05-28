@@ -7,7 +7,7 @@ using System.Linq;
 namespace S64.WhichDotNet.WinExt
 {
 
-    public sealed class WinExt
+    public sealed class AppPathRegs
     {
 
         private static List<RegistryKey> Keys
