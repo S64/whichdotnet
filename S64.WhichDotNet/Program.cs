@@ -20,6 +20,9 @@ namespace S64.WhichDotNet
         [Option("--skip-dot", CommandOptionType.NoValue)]
         bool SkipDot { get; }
 
+        [Option("--skip-tilde", CommandOptionType.NoValue)]
+        bool SkipTilde { get; }
+
         /*
         [Option("--show-dot", CommandOptionType.NoValue)]
         bool ShotDot { get; }
@@ -44,7 +47,7 @@ namespace S64.WhichDotNet
 
         void OnExecute()
         {
-            var results = Which.FindPrograms(ProgramName, skipDot: SkipDot, skipWinReg: SkipWinreg)
+            var results = Which.FindPrograms(ProgramName, skipDot: SkipDot, skipTilde: SkipTilde, skipWinReg: SkipWinreg)
                 .ToList();
 
             if (S)

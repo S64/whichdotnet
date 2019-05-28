@@ -27,11 +27,12 @@ namespace S64.WhichDotNet.Core
         public static readonly DirectoryInfo HomeDir
             = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
 
-        public static IEnumerable<DirectoryInfo> GetOrderedPathDirectories(bool skipDot = false)
+        public static IEnumerable<DirectoryInfo> GetOrderedPathDirectories(bool skipDot = false, bool skipTilde = false)
         {
             return PathEnv.Split(PathSeparator)
                 .Where(x => !string.IsNullOrWhiteSpace(x))
                 .Where(x => !skipDot || x.IndexOf(".", StringComparison.Ordinal) != 0)
+                .Where(x => !skipTilde || x.IndexOf("~", StringComparison.Ordinal) != 0)
                 .Select(x => new DirectoryInfo(x));
         }
 
