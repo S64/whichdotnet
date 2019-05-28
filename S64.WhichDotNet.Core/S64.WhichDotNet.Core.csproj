@@ -7,4 +7,7 @@
   <ItemGroup>
     <Compile Remove="Class1.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\S64.WhichDotNet.WinExt\S64.WhichDotNet.WinExt.csproj" />
+  </ItemGroup>
 </Project>

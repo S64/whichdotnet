@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 
 namespace S64.WhichDotNet.Core
 {
@@ -27,6 +28,16 @@ namespace S64.WhichDotNet.Core
                 .Where(x => x.Exists)
                 .Select(x => new FileInfo($"{x.FullName}{Paths.DSC}{program}"))
                 .Where(x => x.Exists);
+        }
+
+        public static IEnumerable<FileInfo> FindProgramsFromPlatformReg()
+        {
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            {
+                return WinExt.WinExt.GetRegPaths()
+                    .Where(x => x.Exists);
+            }
+            return Enumerable.Empty<FileInfo>();
         }
 
     }
