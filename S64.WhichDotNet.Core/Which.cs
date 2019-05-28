@@ -11,12 +11,12 @@ namespace S64.WhichDotNet.Core
     public sealed class Which
     {
 
-        public static IEnumerable<FileInfo> FindPrograms(string program, bool skipDot = false, bool skipTilde = false, bool skipWinReg = false)
+        public static IEnumerable<FileInfo> FindPrograms(string program, bool skipDot = false, bool skipWinReg = false)
         {
             return Enumerable.Concat(
                 skipWinReg ? Enumerable.Empty<FileInfo>() : FindProgramsFromPlatformReg(),
                 FindProgramsFromPath(
-                    Paths.GetOrderedPathDirectories(skipDot: skipDot, skipTilde: skipTilde),
+                    Paths.GetOrderedPathDirectories(skipDot: skipDot),
                     program
                 )
             );
