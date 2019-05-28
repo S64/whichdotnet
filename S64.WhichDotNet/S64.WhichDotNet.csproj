@@ -6,4 +6,8 @@
     <AssemblyName>which</AssemblyName>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="McMaster.Extensions.CommandLineUtils" Version="2.3.4" />
+  </ItemGroup>
+
 </Project>
