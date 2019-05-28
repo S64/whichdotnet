@@ -43,7 +43,7 @@ namespace S64.WhichDotNet.Core
             return dirs
                 .Where(x => x.Exists)
                 .Select(x => new FileInfo($"{x.FullName}{DSC}{program}"))
-                .Where(x => x.Exists)
+                .Where(x => x.Exists);
         }
 
     }
