@@ -28,6 +28,9 @@ namespace S64.WhichDotNet
         [Option("-s", CommandOptionType.NoValue)]
         bool S { get; }
 
+        [Option("--skip-winreg", CommandOptionType.NoValue)]
+        bool SkipWinreg { get; }
+
         static void Main(string[] args)
             => CommandLineApplication.Execute<Program>(args);
 
