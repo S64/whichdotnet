@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.IO;
+using System.Collections.Generic;
 
 namespace S64.WhichDotNet.Core
 {
@@ -19,6 +21,13 @@ namespace S64.WhichDotNet.Core
         private static readonly bool IsWindows
             = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
 
+
+        public IEnumerable<DirectoryInfo> GetOrderedPathDirectories()
+        {
+            return PathEnv.Split(PathSeparator)
+                .Where(x => !string.IsNullOrEmpty(x))
+                .Select(x => new DirectoryInfo(x));
+        }
     }
 
 }
