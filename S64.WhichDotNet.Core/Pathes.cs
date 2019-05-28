@@ -22,11 +22,12 @@ namespace S64.WhichDotNet.Core
             = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
 
 
-        public IEnumerable<DirectoryInfo> GetOrderedPathDirectories(bool skipDot = false)
+        public IEnumerable<DirectoryInfo> GetOrderedPathDirectories(bool skipDot = false, bool skipTilde = false)
         {
             return PathEnv.Split(PathSeparator)
                 .Where(x => !string.IsNullOrEmpty(x))
                 .Where(x => !skipDot || x.IndexOf(".", StringComparison.Ordinal) != 0)
+                .Where(x => !skipTilde || x.IndexOf("~", StringComparison.Ordinal) != 0)
                 .Select(x => new DirectoryInfo(x));
         }
     }
