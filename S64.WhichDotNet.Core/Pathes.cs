@@ -34,7 +34,7 @@ namespace S64.WhichDotNet.Core
                 .Select(x => new DirectoryInfo(x));
         }
 
-        public IEnumerable<FileInfo> FindProgram(IEnumerable<DirectoryInfo> dirs, string program)
+        public IEnumerable<FileInfo> FindProgramFromPath(IEnumerable<DirectoryInfo> dirs, string program)
         {
             if (string.IsNullOrWhiteSpace(program))
             {
