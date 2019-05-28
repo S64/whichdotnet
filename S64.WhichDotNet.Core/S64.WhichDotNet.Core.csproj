@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Description>Implements of "which" features for .NET embedded uses.</Description>
   </PropertyGroup>
 
   <ItemGroup>
