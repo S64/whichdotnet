@@ -8,6 +8,7 @@ using System.Collections.Generic;
 namespace S64.WhichDotNet
 {
 
+    [HelpOption]
     class Program
     {
 
