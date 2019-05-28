@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace S64.WhichDotNet.Core
 {
 
-    public sealed class Pathes
+    public sealed class Paths
     {
 
         private static readonly char PathSeparator

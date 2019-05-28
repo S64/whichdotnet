@@ -17,7 +17,7 @@ namespace S64.WhichDotNet.Core
             }
             return dirs
                 .Where(x => x.Exists)
-                .Select(x => new FileInfo($"{x.FullName}{Pathes.DSC}{program}"))
+                .Select(x => new FileInfo($"{x.FullName}{Paths.DSC}{program}"))
                 .Where(x => x.Exists);
         }
 
