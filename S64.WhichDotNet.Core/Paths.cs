@@ -24,6 +24,9 @@ namespace S64.WhichDotNet.Core
         public static readonly char DSC
                     = Path.DirectorySeparatorChar;
 
+        public static readonly DirectoryInfo HomeDir
+            = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile));
+
         public static IEnumerable<DirectoryInfo> GetOrderedPathDirectories(bool skipDot = false, bool skipTilde = false)
         {
             return PathEnv.Split(PathSeparator)

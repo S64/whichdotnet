@@ -1,6 +1,9 @@
 ﻿using System;
 using McMaster.Extensions.CommandLineUtils;
 using S64.WhichDotNet.Core;
+using System.Linq;
+using System.IO;
+using System.Collections.Generic;
 
 namespace S64.WhichDotNet
 {
@@ -42,7 +45,30 @@ namespace S64.WhichDotNet
 
         void OnExecute()
         {
+            var results = Which.FindPrograms(ProgramName, skipDot: SkipDot, skipTilde: SkipTilde, skipWinReg: SkipWinreg)
+                .ToList();
 
+            if (S)
+            {
+                Environment.Exit(results.Count == 0 ? 1 : 0);
+                return;
+            }
+
+            List<FileInfo> output = All ? results : results.Take(1).ToList();
+
+            foreach (var item in output)
+            {
+                if (ShowTilde && item.FullName.IndexOf(Paths.HomeDir.FullName, StringComparison.OrdinalIgnoreCase) == 0)
+                {
+                    Console.WriteLine(
+                        $"~{Paths.DSC}{item.FullName.Remove(0, Paths.HomeDir.FullName.Length)}"
+                    );
+                }
+                else
+                {
+                    Console.WriteLine(item.FullName);
+                }
+            }
         }
 
     }
