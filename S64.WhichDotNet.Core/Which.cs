@@ -9,7 +9,15 @@ namespace S64.WhichDotNet.Core
     public sealed class Which
     {
 
-        public IEnumerable<FileInfo> FindProgramFromPath(IEnumerable<DirectoryInfo> dirs, string program)
+        public static IEnumerable<FileInfo> FindProgram(string program, bool skipDot = false, bool skipTilde = false)
+        {
+            return FindProgramFromPath(
+                Paths.GetOrderedPathDirectories(skipDot: skipDot, skipTilde: skipTilde),
+                program
+            );
+        }
+
+        public static IEnumerable<FileInfo> FindProgramFromPath(IEnumerable<DirectoryInfo> dirs, string program)
         {
             if (string.IsNullOrWhiteSpace(program))
             {
