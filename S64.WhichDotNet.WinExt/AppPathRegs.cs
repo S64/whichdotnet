@@ -12,7 +12,7 @@ namespace S64.WhichDotNet.WinExt
 
         private static List<RegistryKey> Keys
         {
-            get { return new List<RegistryKey> { Registry.CurrentUser, Registry.LocalMachine } }
+            get { return new List<RegistryKey> { Registry.CurrentUser, Registry.LocalMachine }; }
         }
 
         public static IEnumerable<FileInfo> GetOrderedRegPaths()
