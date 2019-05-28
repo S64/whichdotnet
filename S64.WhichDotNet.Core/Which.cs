@@ -13,9 +13,12 @@ namespace S64.WhichDotNet.Core
 
         public static IEnumerable<FileInfo> FindPrograms(string program, bool skipDot = false, bool skipTilde = false)
         {
-            return FindProgramsFromPath(
-                Paths.GetOrderedPathDirectories(skipDot: skipDot, skipTilde: skipTilde),
-                program
+            return Enumerable.Concat(
+                FindProgramsFromPlatformReg(),
+                FindProgramsFromPath(
+                    Paths.GetOrderedPathDirectories(skipDot: skipDot, skipTilde: skipTilde),
+                    program
+                )
             );
         }
 
