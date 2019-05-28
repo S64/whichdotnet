@@ -8,7 +8,8 @@
   <ItemGroup>
     <Compile Remove="Class1.cs" />
   </ItemGroup>
+
   <ItemGroup>
-    <ProjectReference Include="..\S64.WhichDotNet.WinExt\S64.WhichDotNet.WinExt.csproj" />
+    <PackageReference Include="S64.WhichDotNet.WinExt" Version="0.0.0.1" />
   </ItemGroup>
 </Project>
